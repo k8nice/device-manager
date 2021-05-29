@@ -1,0 +1,65 @@
+
+######################################################################
+### Java files ###
+# *.yml
+
+### Compiled class file ###
+*.class
+
+### Log file ###
+*.log
+
+### BlueJ files ###
+*.ctxt
+
+### Mobile Tools for Java (J2ME) ###
+.mtj.tmp/
+
+### virtual machine crash logs ###
+hs_err_pid*
+
+######################################################################
+# Build Tools
+
+### Gradle ###
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Maven ###
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+######################################################################
+# IDE
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+nbproject/private/
+build/*
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+######################################################################
+# Others
+*.xml.versionsBackup
+
+!*/build/*.java
+!*/build/*.html
+!*/build/*.xml

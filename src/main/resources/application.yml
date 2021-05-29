@@ -1,0 +1,44 @@
+#指定配置文件
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+#    password:
+  #    应用名
+  application:
+    name: device-server
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+#日志
+logging:
+  config: classpath:log4j2.xml
+  level:
+    org:
+      apache: off
+      springframework: off
+    com:
+      zaxxer: off
+    root: info
+
+
+server:
+  port: 9898
+  shutdown: graceful
+
+#优雅停机
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: shutdown
+
+
+netty_port: 9090
+
+
+
