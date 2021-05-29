@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 /**
- * 手表通信服务实现类
+ * 设备通信服务实现类
  *
  * @author 宁海博
  */

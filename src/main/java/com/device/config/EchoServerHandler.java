@@ -166,7 +166,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
                     LogPrint.print("channelId存在,继续执行业务");
                     Object jsonObject1 = deviceService.checkCodeType(jsonObject.get("code").toString(), jsonObject, map.get(ctx.channel().id()), ctx.channel().id(), ctx);
                     if (!ObjectUtils.isEmpty(jsonObject1)) {
-                        LogPrint.print("发送给手表的tcp报文为:" + message);
+                        LogPrint.print("发送给设备的tcp报文为:" + message);
                         message = String.valueOf(jsonObject1);
                     }
                 }
@@ -175,7 +175,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
                     //把业务执行后返回的结果发送回客户端
                     ChannelFuture channelFuture = ctx.writeAndFlush(message);
                     if (channelFuture.isSuccess()) {
-                        LogPrint.print("发送内容到手表成功");
+                        LogPrint.print("发送内容到设备成功");
                     } else {
                         LogPrint.print("发送失败");
                     }
